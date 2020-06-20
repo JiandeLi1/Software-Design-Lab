@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onDragDetected="#handleButton" prefHeight="683.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Text layoutX="246.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mortgage calculator" wrappingWidth="225.205078125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="63.0" layoutY="82.0" prefHeight="122.0" prefWidth="586.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="35.0" prefWidth="187.0" text="down-payment：" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="204.0" text="Interest rate（%）:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="172.0" text="purchase price：">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="price" GridPane.columnIndex="1" />
+            <TextField fx:id="payment" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="rate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button layoutX="453.0" layoutY="298.0" mnemonicParsing="false" onAction="#Calculate" prefHeight="39.0" prefWidth="100.0" text="Calculate" />
+      <Button layoutX="570.0" layoutY="298.0" mnemonicParsing="false" onAction="#clear" text="Clean" />
+      <Slider fx:id="years" layoutX="359.0" layoutY="243.0" majorTickUnit="10.0" max="30.0" prefHeight="21.0" prefWidth="187.0" showTickLabels="true" showTickMarks="true" />
+      <Text layoutX="570.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Years" wrappingWidth="52.205078125" />
+      <GridPane layoutX="96.0" layoutY="359.0" prefHeight="90.0" prefWidth="520.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="35.0" prefWidth="164.0" text="loan amount:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="221.0" text="monthly payments:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="yrs" text="      " />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Years" wrappingWidth="57.416015625" GridPane.columnIndex="1" />
+            <Label fx:id="loanm" text="      " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="mp" text="      " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="18.0" layoutY="518.0" prefHeight="122.0" prefWidth="682.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="27.0" prefWidth="319.0" text="The monthly payments for 30 years:" GridPane.rowIndex="2" />
+            <Label prefHeight="27.0" prefWidth="298.0" text="The monthly payments for 20 years:" GridPane.rowIndex="1" />
+            <Label prefHeight="27.0" prefWidth="304.0" text="The monthly payments for 10 years:" />
+            <Label fx:id="mp3" text="      " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="mp2" text="      " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="mp1" text="        " GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
